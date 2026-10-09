@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var originalFetch = window.fetch;
+          if (originalFetch) {
+            Object.defineProperty(window, 'fetch', {
+              value: originalFetch.bind(window),
+              writable: true,
+              configurable: true,
+            });
+          }
+        } catch (e) {}
+        window.addEventListener(
+          'error',
+          function (event) {
+            if (
+              event &&
+              ((event.filename && event.filename.indexOf('chrome-extension://') === 0) ||
+                (event.message && event.message.indexOf('Cannot set property fetch') !== -1))
+            ) {
+              event.stopImmediatePropagation();
+              event.preventDefault();
+            }
+          },
+          true
+        );
+      })();
+    </script>
+    <title>VRINDAVAN NATURAL'S – 100% Natural Ayurvedic Herbal Powders</title>
+    <meta
+      name="description"
+      content="Discover 100% pure, shade-dried Ayurvedic herbal powders by VRINDAVAN NATURAL'S. Founded by Mr. Nikhil P. Wankar. Shop Moringa, Amla, Triphala, Ashwagandha & more."
+    />
+    <meta
+      name="keywords"
+      content="Vrindavan Naturals, Ayurvedic herbal powders, Nikhil P Wankar, Moringa powder, Amla powder, Triphala powder, Ashwagandha, Shatavari, Arjun Chhal, Shikakai, Reetha, Indian botanical exports"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VRINDAVAN NATURAL'S" />
+    <meta property="og:title" content="VRINDAVAN NATURAL'S – 100% Natural Ayurvedic Herbal Powders" />
+    <meta
+      property="og:description"
+      content="Discover 100% pure, shade-dried Ayurvedic herbal powders by VRINDAVAN NATURAL'S. Founded by Mr. Nikhil P. Wankar. Shop Moringa, Amla, Triphala, Ashwagandha & more."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VRINDAVAN NATURAL'S – 100% Natural Ayurvedic Herbal Powders" />
+    <meta
+      name="twitter:description"
+      content="Discover 100% pure, shade-dried Ayurvedic herbal powders by VRINDAVAN NATURAL'S. Founded by Mr. Nikhil P. Wankar. Shop Moringa, Amla, Triphala, Ashwagandha & more."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Devanagari:wght@600;700;800&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Brand",
+        "name": "VRINDAVAN NATURAL'S",
+        "description": "Trusted Indian Ayurvedic wellness brand offering 100% pure, shade-dried single-origin herbal powders and botanical formulations.",
+        "founder": {
+          "@type": "Person",
+          "name": "Mr. Nikhil P. Wankar"
+        },
+        "countryOfOrigin": "India",
+        "slogan": "Pure Vedic Botanicals, Shade-Dried for Living Potency"
+      }
+    </script>
+  </head>
+  <body class="bg-[#F9F6F0] text-[#14281D] antialiased selection:bg-[#14281D] selection:text-[#F9F6F0]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
