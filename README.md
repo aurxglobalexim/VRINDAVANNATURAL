@@ -27,6 +27,16 @@ npm run build
 3. Under **Build and deployment → Source**, select **GitHub Actions**.
 4. The workflow in `.github/workflows/deploy.yml` will automatically build and publish your site.
 
+## Deploying on Cloudflare Pages / Workers
+1. Push this repository to GitHub (or export the project ZIP).
+2. In the **Cloudflare Dashboard**, go to **Workers & Pages → Create → Pages → Connect to Git** (or **Upload assets**).
+3. Configure the build settings:
+   - **Framework preset**: `Vite` (or `None`)
+   - **Build command**: `npm run build`
+   - **Build output directory**: `dist`
+   - **Environment variables (optional)**: `NODE_VERSION` = `22`
+4. Cloudflare Pages automatically serves `index.html` as a Single-Page Application (SPA) fallback without needing a `_redirects` loop rule.
+
 ## Deploying with Netlify (via GitHub)
 1. Push this repository to GitHub.
 2. In Netlify, click **Add new site → Import an existing project → GitHub** and select your repository.
