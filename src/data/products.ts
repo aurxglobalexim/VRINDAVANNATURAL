@@ -1,4 +1,3 @@
-import heroCollectionImg from '../assets/images/hero_flat_plastic_jars_ayurveda_1791484419511.jpg';
 import heroAyurvedicBgImg from '../assets/images/hero_ayurvedic_theme_bg_1791486164343.jpg';
 import storyCraftsmanshipImg from '../assets/images/story_herbal_craftsmanship_1791482295366.jpg';
 import studioJarGreensImg from '../assets/images/studio_jar_moringa_greens_1791552646958.jpg';
@@ -8,7 +7,6 @@ import studioJarBeetrootImg from '../assets/images/studio_jar_beetroot_ruby_1791
 import studioJarBarkImg from '../assets/images/studio_jar_bark_shikakai_1791552699608.jpg';
 
 export const BRAND_IMAGES = {
-  heroCollection: heroCollectionImg,
   heroAyurvedicBg: heroAyurvedicBgImg,
   storyCraftsmanship: storyCraftsmanshipImg,
   greenVitality: studioJarGreensImg,

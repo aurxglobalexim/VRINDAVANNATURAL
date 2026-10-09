@@ -8,7 +8,7 @@ interface ProductCardProps {
   onSelectProduct: (product: AyurvedicProduct) => void;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({
+export const ProductCard: React.FC<ProductCardProps> = React.memo(({
   product,
   onSelectProduct,
 }) => {
@@ -104,4 +104,4 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       </div>
     </article>
   );
-};
+});

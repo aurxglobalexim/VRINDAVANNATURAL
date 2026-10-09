@@ -73,7 +73,7 @@ function getJarCalibration(studioImage: string) {
   };
 }
 
-export const ProductPouchArt: React.FC<ProductPouchArtProps> = ({
+export const ProductPouchArt: React.FC<ProductPouchArtProps> = React.memo(({
   product,
   selectedWeight = '100g',
   className = '',
@@ -93,11 +93,15 @@ export const ProductPouchArt: React.FC<ProductPouchArtProps> = ({
     <div
       className={`relative w-full h-full overflow-hidden select-none bg-[#E8E0CE] ${className}`}
     >
-      {/* 1. REAL 8K STUDIO PHOTOGRAPH BASE */}
+      {/* 1. OPTIMIZED STUDIO PHOTOGRAPH BASE */}
       {!imgError && (
         <img
           src={product.studioImage}
           alt={`${product.name} (${product.devanagariName}) in flat clear plastic jar`}
+          width={720}
+          height={720}
+          loading="lazy"
+          decoding="async"
           referrerPolicy="no-referrer"
           onError={() => setImgError(true)}
           className="absolute inset-0 w-full h-full object-cover"
@@ -327,4 +331,4 @@ export const ProductPouchArt: React.FC<ProductPouchArtProps> = ({
       </div>
     </div>
   );
-};
+});

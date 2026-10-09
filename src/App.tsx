@@ -149,10 +149,14 @@ export default function App() {
       <main className="flex-1">
         {/* SECTION 1: FULL-WIDTH AYURVEDIC THEME HERO BANNER */}
         <section className="relative bg-[#091C12] text-[#F9F6F0] overflow-hidden border-b border-[#B8934A]/30 min-h-[460px] sm:min-h-[560px] lg:min-h-[620px] flex items-center">
-          {/* Full-Bleed Ayurvedic Botanical Background Image */}
+          {/* Full-Bleed Ayurvedic Botanical Background Image (LCP Prioritized) */}
           <img
             src={BRAND_IMAGES.heroAyurvedicBg}
             alt="Traditional Ayurvedic herbs, moringa leaves, amla berries, and stone mortar in golden sunlight"
+            width={1280}
+            height={720}
+            fetchPriority="high"
+            decoding="async"
             referrerPolicy="no-referrer"
             className="absolute inset-0 w-full h-full object-cover object-[68%_center] sm:object-center"
           />
@@ -266,6 +270,10 @@ export default function App() {
                     <img
                       src={BRAND_IMAGES.storyCraftsmanship}
                       alt="Traditional Ayurvedic botanical grinding and shade-drying craftsmanship at VRINDAVAN NATURAL'S"
+                      width={880}
+                      height={660}
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                       onError={() => setStoryImgError(true)}
                       className="w-full h-full object-cover"
