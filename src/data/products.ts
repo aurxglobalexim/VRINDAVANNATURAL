@@ -60,7 +60,8 @@ export interface AyurvedicProduct {
   packSizes: PackSizeOption[];
 }
 
-export const WHATSAPP_NUMBER = '919823000000';
+export const WHATSAPP_NUMBER = '918999669899';
+export const CONTACT_NUMBER = '8999669899';
 
 export const PRODUCTS: AyurvedicProduct[] = [
   {

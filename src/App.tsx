@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {
   MessageCircle,
+  Phone,
   ArrowRight,
   Menu,
   X,
@@ -12,6 +13,7 @@ import {
   QUALITY_PILLARS,
   RITUAL_GUIDES,
   WHATSAPP_NUMBER,
+  CONTACT_NUMBER,
 } from './data/products';
 import { ProductCard } from './components/ProductCard';
 import { ProductDetailModal } from './components/ProductDetailModal';
@@ -442,10 +444,14 @@ export default function App() {
                   </span>
                 </div>
                 <div className="p-3.5 sm:p-4 rounded-xl bg-[#F9F6F0] border border-[#14281D]/10 flex justify-between items-center gap-2">
-                  <span className="text-[#14281D]/65">Quality Promise</span>
-                  <span className="font-medium text-[#14281D] text-right">
-                    100% Pure · Natural · Ayurvedic
-                  </span>
+                  <span className="text-[#14281D]/65">Contact &amp; WhatsApp</span>
+                  <a
+                    href={`tel:+91${CONTACT_NUMBER}`}
+                    className="font-mono-tabular font-semibold text-[#1F5E3B] hover:underline inline-flex items-center gap-1.5 text-right"
+                  >
+                    <Phone className="w-3.5 h-3.5 shrink-0" />
+                    <span>+91 {CONTACT_NUMBER}</span>
+                  </a>
                 </div>
                 <div className="p-3.5 sm:p-4 rounded-xl bg-[#F9F6F0] border border-[#14281D]/10 flex justify-between items-center gap-2">
                   <span className="text-[#14281D]/65">Dispatch Hours</span>
@@ -466,7 +472,7 @@ export default function App() {
             <div className="space-y-2">
               <VrindavanFullLogo variant="light" className="h-11 sm:h-13 w-auto" />
               <p className="text-xs text-[#D4B982]">
-                100% Natural Ayurvedic Herbal Powders · Founded by Mr. Nikhil P. Wankar
+                100% Natural Ayurvedic Herbal Powders · Founded by Mr. Nikhil P. Wankar · Contact / WhatsApp: +91 {CONTACT_NUMBER}
               </p>
             </div>
 
